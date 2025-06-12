@@ -1,0 +1,19 @@
+{% extends 'portfolio/base.html' %}
+
+{% block title %}Vizualizează CV{% endblock %}
+
+{% block content %}
+    <section class="cv-section">
+        <h2>Curriculum Vitae</h2>
+        {% if sections %}
+            {% for section in sections %}
+                <div class="cv-item">
+                    <h3>{{ section.header }}</h3>
+                    <p>{{ section.content|linebreaksbr }}</p>
+                </div>
+            {% endfor %}
+        {% else %}
+            <p>Nu există secțiuni CV adăugate încă.</p>
+        {% endif %}
+    </section>
+{% endblock %}

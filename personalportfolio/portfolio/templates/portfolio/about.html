@@ -1,0 +1,32 @@
+{% extends 'portfolio/base.html' %}
+
+{% block title %}Despre Mine{% endblock %}
+
+{% block content %}
+    <section class="about-section">
+        <h2>Marandici Daniel</h2>
+        <div class="about-content">
+            {% load static %}
+            <img src="{% static 'img/my_image.png' %}" alt="Imaginea mea" class="profile-image">
+            <div class="text-content">
+                <h3>Descriere</h3>
+                <p>
+                    My name is Daniel, and I am a Java developer with 3 years of experience.
+                    I have always enjoyed problem-solving and building software since high school, which is why I chose a career in software engineering.
+                    <br>
+                    I would like to share that I enjoy working with Java and Spring Boot.
+                    I have studied extensively for my Oracle certification and gained a strong understanding of Java, which makes me feel confident and comfortable with the language.
+                    Additionally, I appreciate working with Spring Boot due to my hands-on experience, which has allowed me to learn a lot and deepen my expertise.
+                </p>
+
+                <h3>Locație</h3>
+                <p>Chișinău, Moldova</p>
+
+                <h3>Contacte</h3>
+                <p><strong>Telefon (MD):</strong> +373 67136911</p>
+                <p><strong>Email:</strong> danielmarandici2001@gmail.com </p>
+                <p><strong>Linkedin:</strong> <a href="https://www.linkedin.com/in/marandici-daniel-855503212/">https://www.linkedin.com/in/marandici-daniel-855503212/</a> </p>
+            </div>
+        </div>
+    </section>
+{% endblock %}

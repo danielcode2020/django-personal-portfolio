@@ -1,0 +1,15 @@
+{% extends 'portfolio/base.html' %}
+
+{% block title %}{{ action }} Secțiune CV{% endblock %}
+
+{% block content %}
+    <section class="form-section">
+        <h2>{{ action }} Secțiune CV</h2>
+        <form method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit" class="btn">{{ action }} Secțiune</button>
+            <a href="{% url 'edit_cv' %}" class="btn cancel-btn">Anulează</a>
+        </form>
+    </section>
+{% endblock %}

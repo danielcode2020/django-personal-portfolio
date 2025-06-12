@@ -1,0 +1,26 @@
+{% extends 'portfolio/base.html' %}
+
+{% block title %}Editează CV{% endblock %}
+
+{% block content %}
+    <section class="edit-cv-section">
+        <h2>Editează Secțiunile CV</h2>
+        <p><a href="{% url 'add_cv_section' %}" class="btn">Adaugă Secțiune Nouă</a></p>
+
+        {% if sections %}
+            <ul class="cv-list">
+                {% for section in sections %}
+                    <li>
+                        <strong>{{ section.order }}. {{ section.header }}</strong>: {{ section.content|truncatechars:100 }}
+                        <div class="actions">
+                            <a href="{% url 'edit_cv_section' section.pk %}" class="btn edit-btn">Editează</a>
+                            <a href="{% url 'delete_cv_section' section.pk %}" class="btn delete-btn">Șterge</a>
+                        </div>
+                    </li>
+                {% endfor %}
+            </ul>
+        {% else %}
+            <p>Nu există secțiuni CV de editat. Adaugă una nouă!</p>
+        {% endif %}
+    </section>
+{% endblock %}
