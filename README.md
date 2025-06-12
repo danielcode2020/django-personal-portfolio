@@ -1,4 +1,4 @@
-Cerintele :
+**Cerintele :**
 
 Tema pe parcurs la disciplina TWAAOS va consta în implementarea unei aplicații Django minimale.
 
@@ -15,38 +15,56 @@ Aplicația va fi însoțită de un document PDF care va descrie pe scurt tema, t
 Comenzile de compilare/rulare/execuție (sau scripturile ce le conțin) vor fi de asemenea listate în document.
 
 
-Creating a virtual env (from Django-portfolio) :
+**Rularea aplicatiei folosind python local :**
 
-```py -m venv .venv```
+1. Create the virtual environment :
+```
+py -m venv .venv
+```
+2. Navigate to personalportfolio and start application
+```
+cd personalportfolio/
+```
+```
+py manage.py runserver 8001
+```
 
-Activating the virtual env (from Django-portfolio) :
+**Rularea aplicatiei folosind docker (1 comanda) :**
+```
+docker run -p 8000:8000 danielmarandici/django-personal-portfolio:latest
+```
 
-```source .venv/Scripts/activate```
+**Comenzi utile :**
 
-Install Django :
+Creating a virtual env 
+```
+py -m venv .venv
+```
 
-```py -m pip install Django```
+Activating the virtual env :
+```
+source .venv/Scripts/activate
+```
 
-Creating a django project (from Django-portfolio) :
+Installing Django :
+```
+py -m pip install Django
+```
 
-```django-admin startproject django-personal-portfolio```
+Creating a django project :
+```
+django-admin startproject personalportfolio
+```
 
-Running the project :
-
-```cd personalportfolio/```
-
-```py manage.py runserver 8001```
-
+**Comenzi docker**
 
 Build local docker image.
 From Django-portfolio/personalportfolio run :
-
-```docker build -t danielmarandici/django-personal-portfolio .```
+```
+docker build -t danielmarandici/django-personal-portfolio .
+```
 
 Push the image :
-
-``` docker push danielmarandici/django-personal-portfolio:latest ```
-
-Running the container :
-
-```docker run -p 8000:8000 danielmarandici/django-personal-portfolio:latest```
+``` 
+docker push danielmarandici/django-personal-portfolio:latest 
+```
