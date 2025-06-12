@@ -1,4 +1,3 @@
 .venv/*
 
-personalportfolio/portfolio/migrations/__pycache__/*
-personalportfolio/personalportfolio/__pycache__/*
+__pycache__/
